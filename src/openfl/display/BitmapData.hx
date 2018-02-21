@@ -97,12 +97,12 @@ class BitmapData implements IBitmapDrawable {
 	private static var __textureFormat:Int;
 	private static var __textureInternalFormat:Int;
 	
-	public var height (default, null):Int;
+	public var height (get, null):Int;
 	public var image (default, null):Image;
 	@:beta public var readable (default, null):Bool;
 	public var rect (default, null):Rectangle;
 	public var transparent (default, null):Bool;
-	public var width (default, null):Int;
+	public var width (get, null):Int;
 	
 	private var __blendMode:BlendMode;
 	private var __buffer:GLBuffer;
@@ -2188,5 +2188,14 @@ class BitmapData implements IBitmapDrawable {
 		
 	}
 	
+	private function get_width():Int 
+    { 
+        return this.width; 
+    } 
+ 
+    private function get_height():Int 
+    { 
+        return this.height; 
+    } 
 	
 }
